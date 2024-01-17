@@ -1,28 +1,38 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
-        <title>Sudoku</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TG Codes💛-Quiz Site</title>
+    <!--External Style Sheet-->
+    <link rel="stylesheet" href="./style.css">
+    <!--Icon for the site-->
+    <link rel="icon" href="./Website icon.png" type="icon/x-image">
+</head>
+<body>
+    <!-- Add this div for the introductory animation -->
+<div class="intro-animation" id="intro-animation">
+    <h2>Created By Sheikhspeare</h2>
+</div>
 
-        <link rel="stylesheet" href="sudoku.css">
-        <script src="sudoku.js"></script>
-    </head>
+    <div class="app">
+        <h1>Islam Quiz</h1>
+        <div class="quiz">
+    
 
-    <body>
-        <h1>Sudoku</h1>
-        <hr>
-        <h2>Wrong count</h2>
-        <h2 id="errors">0</h2>
-
-        <!-- 9x9 board -->
-        <div id="board"></div>
-        <br>
-        <div id="digits">
+            <h2 id="question">Question goes here</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
         </div>
-        <div class="container"><center>
-            <h1 class="title">Created by <br>Mirza Wasi<br>Sheikh Naeem<br>Naqsha Parray</h1>
-       </center> </div>
-    </body>
+    </div>
 
 
+    <!--JS File-->
+    <script src="./script.js"></script>
+</body>
 </html>
