@@ -83,7 +83,7 @@ body{
 }
 /* Add this CSS for the animated background */
 body {
-    background: linear-gradient(45deg, #2980B9, #e26944, #ffff34, #6DD5FA, #29b954);
+    background: linear-gradient(45deg, #2980B9, #e26944, #800080, #6DD5FA, #29b954);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
 }
