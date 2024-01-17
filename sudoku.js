@@ -77,7 +77,7 @@ function playIntroAnimation() {
 
             // Start displaying the first question
             showQuestion();
-        }, 3000); // Adjust the time to match the exit animation duration (in milliseconds)
+        }, 100); // Adjust the time to match the exit animation duration (in milliseconds)
     }, 3000); // Adjust the time to match the initial animation duration (in milliseconds)
 }
 
