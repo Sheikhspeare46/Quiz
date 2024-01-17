@@ -77,16 +77,13 @@ function playIntroAnimation() {
 
             // Start displaying the first question
             showQuestion();
-        }, 1000); // Adjust the time to match the exit animation duration (in milliseconds)
-    }, 2000); // Adjust the time to match the initial animation duration (in milliseconds)
+        }, 3000); // Adjust the time to match the exit animation duration (in milliseconds)
+    }, 3000); // Adjust the time to match the initial animation duration (in milliseconds)
 }
 
 // Call playIntroAnimation before starting the quiz
 playIntroAnimation();
 
-
-// Call playIntroAnimation before starting the quiz
-playIntroAnimation();
 
 
 
