@@ -1,95 +1,195 @@
-var numSelected = null;
-var tileSelected = null;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-var errors = 0;
-
-var board = [
-    "--74916-5",
-    "2---6-3-9",
-    "-----7-1-",
-    "-586----4",
-    "--3----9-",
-    "--62--187",
-    "9-4-7---2",
-    "67-83----",
-    "81--45---"
-]
-
-var solution = [
-    "387491625",
-    "241568379",
-    "569327418",
-    "758619234",
-    "123784596",
-    "496253187",
-    "934176852",
-    "675832941",
-    "812945763"
-]
-
-window.onload = function() {
-    setGame();
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-function setGame() {
-    // Digits 1-9
-    for (let i = 1; i <= 9; i++) {
-        //<div id="1" class="number">1</div>
-        let number = document.createElement("div");
-        number.id = i
-        number.innerText = i;
-        number.addEventListener("click", selectNumber);
-        number.classList.add("number");
-        document.getElementById("digits").appendChild(number);
-    }
+body{
+    background: #001e4d;
+}
 
-    // Board 9x9
-    for (let r = 0; r < 9; r++) {
-        for (let c = 0; c < 9; c++) {
-            let tile = document.createElement("div");
-            tile.id = r.toString() + "-" + c.toString();
-            if (board[r][c] != "-") {
-                tile.innerText = board[r][c];
-                tile.classList.add("tile-start");
-            }
-            if (r == 2 || r == 5) {
-                tile.classList.add("horizontal-line");
-            }
-            if (c == 2 || c == 5) {
-                tile.classList.add("vertical-line");
-            }
-            tile.addEventListener("click", selectTile);
-            tile.classList.add("tile");
-            document.getElementById("board").append(tile);
-        }
+.app{
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h1{
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.quiz{
+    padding: 20px 90;
+}
+
+.quiz h2{
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+}
+
+.btn{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct{
+    background: #9aeabc;
+}
+
+.incorrect{
+    background: #ff9393;
+}
+/* Add this CSS for the animated background */
+body {
+    background: linear-gradient(45deg, #2980B9, #6DD5FA, #ffffff, #6DD5FA, #2980B9);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
-function selectNumber(){
-    if (numSelected != null) {
-        numSelected.classList.remove("number-selected");
-    }
-    numSelected = this;
-    numSelected.classList.add("number-selected");
+/* Add this CSS for the selected answer animation */
+.btn.correct,
+.btn.incorrect {
+    animation: pulse 0.5s ease-in-out;
 }
 
-function selectTile() {
-    if (numSelected) {
-        if (this.innerText != "") {
-            return;
-        }
-
-        // "0-0" "0-1" .. "3-1"
-        let coords = this.id.split("-"); //["0", "0"]
-        let r = parseInt(coords[0]);
-        let c = parseInt(coords[1]);
-
-        if (solution[r][c] == numSelected.id) {
-            this.innerText = numSelected.id;
-        }
-        else {
-            errors += 1;
-            document.getElementById("errors").innerText = errors;
-        }
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }
+/* Add this CSS for the introductory animation */
+.intro-animation {
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}
+
+.intro-animation h2 {
+    font-size: 24px;
+    color:black;
+    animation: introAnimation 2s ease-out forwards;
+}
+
+@keyframes introAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add this CSS for the animated box around "Created By Sheikhspeare" */
+.intro-animation {
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}
+
+.intro-animation h2 {
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    background-color: #db1f12;
+    border-radius: 5px;
+    display: inline-block;
+    animation: introAnimation 2s ease-out forwards, boxAnimation 2s ease-out forwards;
+}
+
+@keyframes introAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes boxAnimation {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Add this CSS for the exit animation of the box */
+@keyframes exitAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+
+
+
+
