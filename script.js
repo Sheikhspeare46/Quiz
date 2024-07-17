@@ -93,259 +93,259 @@ playIntroAnimation();
 
 const questions = [
     {
-        question: "What is the name of the mosque that was the first in Islam and was built by Prophet Muhammad in Medina?",
+        question: "What is the capital of France?",
         answers: [
             {
-                text: "Masjid Quba",
+                text: "Paris",
                 correct: true,
             },
             {
-                text: "Masjid al-Aqsa",
+                text: "London",
                 correct: false,
             },
             {
-                text: "Masjid an-Nabawi",
+                text: "Rome",
                 correct: false,
             },
             {
-                text: "Masjid al-Haram",
+                text: "Berlin",
                 correct: false,
             },
         ],
     },
     {
-        question: "Where did Prophet Muhammad receive his first revelation from Allah, marking the beginning of his prophethood?",
+        question: "Who wrote the play 'Romeo and Juliet'?",
         answers: [
             {
-                text: "Mount Sinai",
-                correct: false,
-            },
-            {
-                text: "Mount Thawr",
-                correct: false,
-            },
-            {
-                text: "Mount Uhud",
-                correct: false,
-            },
-            {
-                text: "Mount Hira",
-                correct: true,
-            },
-        ],
-    },
-    {
-        question: "What is the name of the angel who brought revelations to Prophet Muhammad?",
-        answers: [
-            {
-                text: "Angel Azrael",
-                correct: false,
-            },
-            {
-                text: "Angel Israfil",
-                correct: false,
-            },
-            {
-                text: "Angel Jibreel",
+                text: "William Shakespeare",
                 correct: true,
             },
             {
-                text: "Angel Mikail",
+                text: "Charles Dickens",
+                correct: false,
+            },
+            {
+                text: "George Orwell",
+                correct: false,
+            },
+            {
+                text: "Jane Austen",
                 correct: false,
             },
         ],
     },
     {
-        question: "Which Surah in the Quran is named after a woman and primarily addresses the issues faced by women in society?",
+        question: "What is the chemical symbol for water?",
         answers: [
             {
-                text: "Surah Maryam",
-                correct: false,
-            },
-            {
-                text: "Surah An-Nisa",
+                text: "H2O",
                 correct: true,
             },
             {
-                text: "Surah Al-Mumtahanah",
+                text: "O2",
                 correct: false,
             },
             {
-                text: "Surah Al-Mujadila",
+                text: "CO2",
+                correct: false,
+            },
+            {
+                text: "H2SO4",
                 correct: false,
             },
         ],
     },
     {
-        question: "Which Prophet is often referred to as Khalilullah meaning Friend of Allah?",
+        question: "Who was the first President of the United States?",
         answers: [
             {
-                text: "Prophet Ibrahim",
+                text: "George Washington",
                 correct: true,
             },
             {
-                text: "Prophet Nuh",
+                text: "Thomas Jefferson",
                 correct: false,
             },
             {
-                text: "Prophet Isma'il",
+                text: "Abraham Lincoln",
                 correct: false,
             },
             {
-                text: "Prophet Lut",
+                text: "John Adams",
                 correct: false,
             },
         ],
     },
     {
-        question: "What is the name of the Islamic concept that refers to seeking Allah's guidance before making an important decision?",
+        question: "What is the largest planet in our solar system?",
         answers: [
             {
-                text: "Taqwa",
-                correct: false,
-            },
-            {
-                text: " Ihsan",
-                correct: false,
-            },
-            {
-                text: "Istikhara",
+                text: "Jupiter",
                 correct: true,
             },
             {
-                text: " Tawakkul",
+                text: "Saturn",
+                correct: false,
+            },
+            {
+                text: "Earth",
+                correct: false,
+            },
+            {
+                text: "Mars",
                 correct: false,
             },
         ],
     },
     {
-        question: "What is the name of the famous battle in which Ali ibn Abi Talib fought valiantly and earned the title Lion of Allah?",
+        question: "What is the powerhouse of the cell?",
         answers: [
             {
-                text: "Battle of Uhud",
-                correct: false,
-            },
-            {
-                text: "Battle of Khaybar",
+                text: "Mitochondria",
                 correct: true,
             },
             {
-                text: "Battle of Khandaq",
+                text: "Nucleus",
                 correct: false,
             },
             {
-                text: "Battle of Badr",
+                text: "Ribosome",
+                correct: false,
+            },
+            {
+                text: "Golgi apparatus",
                 correct: false,
             },
         ],
     },
     {
-        question: " In Islamic history, what is the event known as The Battle of Siffin in which Ali ibn Abi Talib fought against the forces of Muawiyah?",
+        question: "Which element has the atomic number 1?",
         answers: [
             {
-                text: "The Battle of Uhud",
-                correct: false,
-            },
-            {
-                text: "The Battle of Badr",
-                correct: false,
-            },
-            {
-                text: "The Battle of Khandaq",
-                correct: false,
-            },
-            {
-                text: "The Battle of Siffin",
-                correct: true,
-            },
-        ],
-    },
-    {
-        question: "What is the title given to Prophet Muhammad, emphasizing his role as the final prophet in Islam?",
-        answers: [
-            {
-                text: "Al-Mustafa",
+                text: "Hydrogen",
                 correct: true,
             },
             {
-                text: "Al-Ameen",
+                text: "Oxygen",
                 correct: false,
             },
             {
-                text: " Al-Murtadha",
+                text: "Carbon",
                 correct: false,
             },
             {
-                text: "Al-Mujtaba",
+                text: "Helium",
                 correct: false,
             },
         ],
     },
     {
-        question: " What is the commonly used name for the conflict between Ali ibn Abi Talib and Aisha?",
+        question: "Who painted the Mona Lisa?",
         answers: [
             {
-                text: "Battle of the Jamal",
+                text: "Leonardo da Vinci",
                 correct: true,
             },
             {
-                text: "Battle of Siffin",
+                text: "Vincent van Gogh",
                 correct: false,
             },
             {
-                text: "Battle of Badr",
+                text: "Pablo Picasso",
                 correct: false,
             },
             {
-                text: " Battle of Uhud",
-                correct: false,
-            },
-        ],
-    },
-
-    {
-        question: "How many times the word Muhammad (SAW) as a name has been mentioned in Quran?",
-        answers: [
-            {
-                text: "Four",
-                correct: true,
-            },
-            {
-                text: "Three",
-                correct: false,
-            },
-            {
-                text: "Six",
-                correct: false,
-            },
-            {
-                text: "Two",
+                text: "Claude Monet",
                 correct: false,
             },
         ],
     },
     {
-        question: "At what age did Prophet Muhammad receive his first revelation from Allah through the angel Jibreel?",
+        question: "What is the longest river in the world?",
         answers: [
             {
-                text: "40 years",
+                text: "Nile River",
                 correct: true,
             },
             {
-                text: "35 years",
+                text: "Amazon River",
                 correct: false,
             },
             {
-                text: "45 years",
+                text: "Yangtze River",
                 correct: false,
             },
             {
-                text: "23 years",
+                text: "Mississippi River",
+                correct: false,
+            },
+        ],
+    },
+    {
+        question: "What is the largest ocean on Earth?",
+        answers: [
+            {
+                text: "Pacific Ocean",
+                correct: true,
+            },
+            {
+                text: "Atlantic Ocean",
+                correct: false,
+            },
+            {
+                text: "Indian Ocean",
+                correct: false,
+            },
+            {
+                text: "Arctic Ocean",
+                correct: false,
+            },
+        ],
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        answers: [
+            {
+                text: "Mars",
+                correct: true,
+            },
+            {
+                text: "Venus",
+                correct: false,
+            },
+            {
+                text: "Jupiter",
+                correct: false,
+            },
+            {
+                text: "Mercury",
+                correct: false,
+            },
+        ],
+    },
+    {
+        question: "Who developed the theory of relativity?",
+        answers: [
+            {
+                text: "Albert Einstein",
+                correct: true,
+            },
+            {
+                text: "Isaac Newton",
+                correct: false,
+            },
+            {
+                text: "Galileo Galilei",
+                correct: false,
+            },
+            {
+                text: "Nikola Tesla",
                 correct: false,
             },
         ],
     },
 ];
+
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -430,3 +430,4 @@ nextButton.addEventListener("click", ()=>{
 });
 
 startQuiz();
+
